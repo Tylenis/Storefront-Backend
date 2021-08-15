@@ -1,5 +1,6 @@
 import { Product } from '../types/types';
 import { client } from '../database';
+import { formatProductData } from '../utilities/dataFormatters';
 
 export class ProductModel {
     async index(): Promise<Product[]> {
@@ -8,7 +9,8 @@ export class ProductModel {
             const conn = await client.connect();
             const result = await conn.query(sql);
             conn.release();
-            return result.rows as [Product];
+            const final = result.rows.map(formatProductData);
+            return final;
         } catch (error) {
             throw new Error(
                 `Could not retrieve products from database. Error details: ${error}`
@@ -23,7 +25,8 @@ export class ProductModel {
             const result = await conn.query(sql, [productid]);
             conn.release();
             if (result.rowCount > 0) {
-                return result.rows[0];
+                const final = formatProductData(result.rows[0]);
+                return final;
             } else {
                 return null;
             }
@@ -41,7 +44,8 @@ export class ProductModel {
             const result = await conn.query(sql, [category]);
             conn.release();
             if (result.rowCount > 0) {
-                return result.rows as [Product];
+                const final = result.rows.map(formatProductData);
+                return final;
             } else {
                 return [];
             }
@@ -64,7 +68,8 @@ export class ProductModel {
                 p.category,
             ]);
             conn.release();
-            return result.rows[0];
+            const final = formatProductData(result.rows[0]);
+            return final;
         } catch (error) {
             throw new Error(
                 `Could not create product ${p.name}. Error details: ${error}`
@@ -85,7 +90,8 @@ export class ProductModel {
                 p.id,
             ]);
             conn.release();
-            return result.rows[0];
+            const final = formatProductData(result.rows[0]);
+            return final;
         } catch (error) {
             throw new Error(
                 `Could not edit product :${p.name}. Error details: ${error}`

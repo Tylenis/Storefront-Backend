@@ -10,8 +10,7 @@
     "jasmine": "jasmine",
     "prettier": "prettier --config .prettierrc.json src/**/*.ts --write",
     "start": "nodemon src/index.ts",
-    "test": "set ENV=test&& db-migrate --env test up && npm run build && npm run jasmine && db-migrate --env test down",
-    "test_old": "npm run build && npm run jasmine"
+    "test": "set ENV=test&& db-migrate --env test up && npm run build && npm run jasmine && db-migrate --env test down"
   },
   "keywords": [],
   "author": "",

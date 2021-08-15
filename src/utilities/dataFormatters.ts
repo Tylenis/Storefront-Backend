@@ -1,4 +1,9 @@
-import { RawOrderDetailData, OrderDetail } from '../types/types';
+import {
+    RawProductData,
+    RawOrderDetailData,
+    OrderDetail,
+    Product,
+} from '../types/types';
 
 const formatOrderData = (data: RawOrderDetailData[]): OrderDetail[] => {
     const ordersIds: number[] = [];
@@ -28,4 +33,14 @@ const formatOrderData = (data: RawOrderDetailData[]): OrderDetail[] => {
     return result;
 };
 
-export { formatOrderData };
+const formatProductData = (pdata: RawProductData): Product => {
+    return {
+        id: pdata.id,
+        name: pdata.name,
+        price: parseFloat(pdata.price),
+        stock: pdata.stock,
+        category: pdata.category,
+    };
+};
+
+export { formatOrderData, formatProductData };

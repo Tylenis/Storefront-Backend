@@ -1,6 +1,6 @@
 import { Order, OrderDetail } from '../types/types';
 import { client } from '../database';
-import { formatOrderData } from '../utilities/formatOrderData';
+import { formatOrderData } from '../utilities/dataFormatters';
 
 export class OrderModel {
     async showAllByUserId(userid: number): Promise<OrderDetail[] | Order[]> {

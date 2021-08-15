@@ -14,7 +14,15 @@ const topProductsByOrders = async (
         const result = await conn.query(sql, [qty]);
         conn.release();
         if (result.rowCount > 0) {
-            res.json(result.rows);
+            const final = result.rows.map((el) => {
+                return {
+                    id: el.id,
+                    name: el.name,
+                    category: el.category,
+                    times_sold: parseInt(el.times_sold),
+                };
+            });
+            res.json(final);
         } else {
             res.json([]);
         }
@@ -39,7 +47,15 @@ const topProductsByOrdersVolume = async (
         const result = await conn.query(sql, [qty]);
         conn.release();
         if (result.rowCount > 0) {
-            res.json(result.rows);
+            const final = result.rows.map((el) => {
+                return {
+                    id: el.id,
+                    name: el.name,
+                    category: el.category,
+                    volume: parseInt(el.volume),
+                };
+            });
+            res.json(final);
         } else {
             res.json([]);
         }

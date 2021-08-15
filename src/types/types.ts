@@ -28,6 +28,14 @@ type OrderDetail = {
     products: Product[];
 };
 
+type RawProductData = {
+    id: number;
+    name: string;
+    price: string;
+    stock: number;
+    category: string;
+};
+
 type RawOrderDetailData = {
     id: number;
     order_id: number;
@@ -41,4 +49,11 @@ type RawOrderDetailData = {
     category: string;
 };
 
-export { User, Product, Order, OrderDetail, RawOrderDetailData };
+export {
+    User,
+    Product,
+    Order,
+    OrderDetail,
+    RawProductData,
+    RawOrderDetailData,
+};
