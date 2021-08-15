@@ -66,6 +66,18 @@ GRANT ALL PRIVILEGES ON DATABASE storefront_db_test TO full_stack_user_test;
 
 **Note.** The idea of .env file is to keep variables secret. You can use these values to run project as demo. Keep in mind PSQL database by default runs on port 5432, when setting server port.
 
+4. Create database tables with db-migrate:
+
+```bash
+db-migrate  up
+```
+
+5. Start server:
+
+```bash
+npm run start
+```
+
 
 ## Endpoints
 
