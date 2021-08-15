@@ -52,7 +52,7 @@ GRANT ALL PRIVILEGES ON DATABASE storefront_db_test TO full_stack_user_test;
 
 3. Create .env file in the project root directory. This file must contain variables: 
 * POSTGRES_HOST = 127.0.0.1
-* POSTGRES_PORT = 3000
+* SERVER_PORT = 3000
 * POSTGRES_DB = storefront_db
 * POSTGRES_USER = full_stack_user
 * POSTGRES_PSW = psw123
@@ -64,7 +64,7 @@ GRANT ALL PRIVILEGES ON DATABASE storefront_db_test TO full_stack_user_test;
 * SALT_ROUNDS = 10
 * TOKEN_SECRET = somestring
 
-**Note.** The idea of .env file is to keep variables secret. You can use these values to run project as demo. 
+**Note.** The idea of .env file is to keep variables secret. You can use these values to run project as demo. Keep in mind PSQL database by default runs on port 5432, when setting server port.
 
 
 ## Endpoints
