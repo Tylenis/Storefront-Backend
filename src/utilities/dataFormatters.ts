@@ -1,9 +1,5 @@
-import {
-    RawProductData,
-    RawOrderDetailData,
-    OrderDetail,
-    Product,
-} from '../types/types';
+import { RawOrderDetailData, OrderDetail } from '../types/orderTypes';
+import { Product, RawProductData } from '../types/productTypes';
 
 const formatOrderData = (data: RawOrderDetailData[]): OrderDetail[] => {
     const ordersIds: number[] = [];

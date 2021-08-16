@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { User } from '../types/types';
+import { User } from '../types/userTypes';
 import { UserModel } from '../models/userModel';
 
 const userModel = new UserModel();

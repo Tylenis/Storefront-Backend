@@ -2,7 +2,9 @@ import supertest from 'supertest';
 import jwt from 'jsonwebtoken';
 
 import app from '../index';
-import { Product, User, Order } from '../types/types';
+import { Order } from '../types/orderTypes';
+import { User } from '../types/userTypes';
+import { Product } from '../types/productTypes';
 import { UserModel } from '../models/userModel';
 import { ProductModel } from '../models/productModel';
 import { OrderModel } from '../models/orderModel';

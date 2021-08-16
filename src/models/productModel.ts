@@ -1,4 +1,4 @@
-import { Product } from '../types/types';
+import { Product } from '../types/productTypes';
 import { client } from '../database';
 import { formatProductData } from '../utilities/dataFormatters';
 

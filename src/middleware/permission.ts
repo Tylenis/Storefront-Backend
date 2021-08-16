@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { User } from '../types/types';
+import { User } from '../types/userTypes';
 
 const verifyUserPermission = (
     req: Request,

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { ProductModel } from '../models/productModel';
-import { Product } from '../types/types';
+import { Product } from '../types/productTypes';
 
 const productModel = new ProductModel();
 

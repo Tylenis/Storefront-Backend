@@ -1,19 +1,4 @@
-type User = {
-    id?: number;
-    firstname: string;
-    lastname: string;
-    username: string;
-    password: string;
-};
-
-type Product = {
-    id?: number;
-    name: string;
-    price: number;
-    stock?: number;
-    category: string;
-    quantity?: number;
-};
+import { Product } from './productTypes';
 
 type Order = {
     id?: number;
@@ -26,14 +11,6 @@ type OrderDetail = {
     userId: number;
     status: string;
     products: Product[];
-};
-
-type RawProductData = {
-    id: number;
-    name: string;
-    price: string;
-    stock: number;
-    category: string;
 };
 
 type RawOrderDetailData = {
@@ -50,10 +27,7 @@ type RawOrderDetailData = {
 };
 
 export {
-    User,
-    Product,
     Order,
     OrderDetail,
-    RawProductData,
     RawOrderDetailData,
 };

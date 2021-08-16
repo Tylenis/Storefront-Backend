@@ -11,8 +11,8 @@ import {
 } from '../controllers/productController';
 import {
     topProductsByOrders,
-    topProductsByOrdersVolume,
-} from '../services/dashboard';
+    topProductsByOrdersVolume
+} from '../controllers/orderProductsController';
 
 const router = express.Router();
 

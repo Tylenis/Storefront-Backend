@@ -1,7 +1,9 @@
 import { OrderModel } from '../../models/orderModel';
 import { ProductModel } from '../../models/productModel';
 import { UserModel } from '../../models/userModel';
-import { Order, Product, User } from '../../types/types';
+import { Order } from '../../types/orderTypes';
+import { Product } from '../../types/productTypes';
+import { User } from '../../types/userTypes';
 
 const userModel = new UserModel();
 const productModel = new ProductModel();

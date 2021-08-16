@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { User } from '../types/types';
+import { User } from '../types/userTypes';
 import { client } from '../database';
 
 const pepper = process.env.BCRYPT_PSW;

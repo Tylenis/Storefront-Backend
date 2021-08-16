@@ -1,4 +1,4 @@
-import { Order, OrderDetail } from '../types/types';
+import { Order, OrderDetail } from '../types/orderTypes';
 import { client } from '../database';
 import { formatOrderData } from '../utilities/dataFormatters';
 
