@@ -86,7 +86,7 @@ Linux users, run:
 npm run test
 ```
 
-windows users, run:
+Windows users, run:
 
 ```
 npm run testW
