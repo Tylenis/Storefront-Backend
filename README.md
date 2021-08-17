@@ -78,6 +78,19 @@ db-migrate  up
 npm run start
 ```
 
+## Tests
+
+Linux users, run:
+
+```
+npm run test
+```
+
+windows users, run:
+
+```
+npm run testW
+```
 
 ## Endpoints
 
