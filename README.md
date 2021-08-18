@@ -16,6 +16,17 @@ npm install
 2. In a terminal, create and run the database:
 * Start psql
 
+Linux users:
+
+```bash
+sudo -i -u postgres
+```
+```bash
+psql
+```
+
+Windows users:
+
 ```bash
 psql postgres postgres
 ```
